@@ -1,0 +1,40 @@
+<?php require_once "header.html"; ?>
+
+<script type="text/javascript" src="Vues/js/accueil.js" ></script>
+
+<section id="contenuDroite">
+
+	<section>
+	<?php
+		//Si on demande un formulaire de connexion, de mot de passe oublié ou d'inscription,
+		if(isset($_GET["action"]) && ($_GET["action"] == 1 || $_GET["action"] == 2 || $_GET["action"] == 3)  )
+			require_once "formulaire.html";
+		else {
+	?>
+		<!--Boutons -->
+		<a href="?action=1"> <button class="boutonDroite">S'inscrire</button> </a>
+		<a href="?action=2"> <button class="boutonDroite">Mot de passe oublié</button> </a>
+		<a href="?action=3"> <button class="boutonDroite">Se connecter</button> </a>
+
+		
+	<?php }; // On ferme le ELSE?>
+	</section>
+	
+	<section id="contenuDroiteBas">
+		<h1 class="hlateraux">Modifier le thème</h1>
+		Sélectionnez votre niveau :
+		<br/>
+		<select id="menuTheme" onchange="theme()">
+			<option selected="selected">Débutant</option>
+			<option>Intermédiaire</option>
+			<option>Confirmé</option>
+		</select>
+	</section>
+</section>
+
+<!--Centre -->
+<section id="contenuCentre">
+	<h1>Vous devez être connecté pour jouer...</h1>
+</section>
+
+<?php require_once "footer.html"; ?>

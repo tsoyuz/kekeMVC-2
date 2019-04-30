@@ -1,0 +1,55 @@
+<?php require_once "header.html"; ?>
+
+<section id="contenuDroite">
+	<section>
+		<h1 class="hlateraux">Profil</h1>
+		<img id="imgNiv" src="../../Images/imageDebutant.png"/>
+		<br/> <br/>
+		<span id="mail"> <strong><?php echo $outAdh->_pseudo ." | " .$outAdh->_mail; ?></strong> </span>
+		<br/>
+		
+		
+		<?php
+			//Si on demande un formulaire de connexion, de mot de passe oublié ou d'inscription,
+			if(isset($_GET["action"]) && ($_GET["action"] == 4)  )
+				require_once "formulaire.html";
+			else {
+		?>
+			<!--Boutons -->
+			<a href="?modele=Adherent&action=4"> <button class="boutonDroite">Modifier mon compte</button> </a>
+			
+		<?php }; // On ferme le ELSE?>
+		
+		
+		<a href="index.php?valid=5"><button class="boutonDroite"> Se déconnecter </button></a>
+		
+		
+	</section>
+	<section id="contenuDroiteBas">
+		<h1 class="hlateraux">Modifier le thème</h1>
+		Sélectionnez votre niveau :
+		<br/>
+		<select id="menuTheme" onchange="theme()">
+			<option selected="selected">Débutant</option>
+			<option>Intermédiaire</option>
+			<option>Confirmé</option>
+		</select>
+	</section>
+</section>
+
+<?php
+	//Si on demande un formulaire de connexion, de mot de passe oublié ou d'inscription,
+	if(isset($_GET["action"]) && ($_GET["action"] == 6 || $_GET["action"] == 7 || $_GET["action"] == 8)  )
+		require_once "formulaire.html";
+	else {
+?>
+<section id="contenuCentre">
+	<h1 id="hcentre">Prêt à vous lancer dans l'aventure ?</h1>
+	<a href="?modele=Adherent&action=6"><button class="boutonCentre"> Créer une partie </button></a>
+	<a href="?modele=Adherent&action=7"><button class="boutonCentre"> Rejoindre une partie </button></a>
+	<a href="?modele=Adherent&action=8"><button class="boutonCentre"> Visualiser une partie </button></a>
+</section>
+
+<?php }; // On ferme le ELSE?>
+
+<?php require_once "footer.html"; ?>

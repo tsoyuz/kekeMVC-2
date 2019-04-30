@@ -1,0 +1,126 @@
+*
+{
+	font-family:"Courier New";
+}
+
+body{
+
+text-align:center;
+
+}
+
+body
+{
+	background-image:url(../../Images/fondDebutant.png);
+	background-attachment:fixed;
+	background-size:cover;
+    margin:0;
+}
+
+header
+{
+	text-align: center;
+	font-size: 17px;
+	border-bottom: solid 2px;
+	border-top: solid 2px;
+	text-shadow: 0 0 0.2em #4449ED, 0 0 0.2em #4449ED;
+	background-color: #E6E8F6;
+}
+
+#contenuGauche
+{
+	float: left;
+    width: 25%;
+	height: 505px;
+	margin-top : 1%;
+    text-align: center;
+}
+
+#contenuCentre
+{
+    margin-left: 25%;
+    margin-right: 25%;
+	margin-top : 1%;
+	padding-bottom : 3%;
+	padding-top : 2%;
+    text-align: center;
+}
+
+#contenuDroite
+{
+    float: right;
+    width: 25%;
+	margin-top : 1%;
+    text-align: center;
+
+}
+
+#contenuDroiteBas
+{
+	margin-top:10%;
+	padding-top:1%;
+
+}
+
+#hcentre
+{
+	font-size: 25px;
+	font-family: "Lucida Console";
+}
+
+.hlateraux
+{
+	font-size: 19px;
+	font-family: "Lucida Console";
+}
+
+.boutonCentre
+{
+	width : 75%;
+	height : 70px;
+	margin-top : 4%;
+	margin-bottom : 2%;
+	font-size: 20px;
+	text-shadow: -1px -1px white, 1px 1px #500;
+	background-image:radial-gradient(#E6E8F6, #676CFA);
+}
+
+.boutonDroite
+{
+	width : 75%;
+	height : 29px;
+	margin-top : 4%;
+	margin-bottom : 1%;
+	font-size: 16px;
+	text-shadow: -1px -1px white, 1px 1px #500;
+	background-image:radial-gradient(#E6E8F6, #676CFA);
+}
+
+select
+{
+	width:50%;
+	margin-top: 5%;
+	margin-bottom: 10%;
+	font-size: 15px;
+	resize:none;
+}
+
+textarea
+{
+	width:90%;
+	height:80%;
+	resize:none;
+	font-size: 15px;
+}
+
+footer
+{
+	margin-top: 4%;
+	margin-bottom: 1%;
+	text-align: center;
+	border-bottom: solid 2px;
+	border-top: solid 2px;
+	font-style: italic;
+	background-color: #E6E8F6;
+	clear: both;		/*permet de situer le pied de page après tout contenu sur les côtés*/
+}

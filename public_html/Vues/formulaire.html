@@ -1,0 +1,29 @@
+<?php
+
+	//Si on demande un formulaire
+	if(isset($_GET["action"]) )
+	{
+		//Inscription
+		if($_GET["action"] == 1)
+			require_once "Vues/Formulaires/inscription.html";
+		//Mdp Oublié
+		if($_GET["action"] == 2)
+			require_once "Vues/Formulaires/mdp_oublie.html";
+		//Mdp Oublié
+		if($_GET["action"] == 3)
+			require_once "Vues/Formulaires/connexion.html";
+		//Modifié Mdp
+		if($_GET["action"] == 4)
+			require_once "Vues/Formulaires/mdp_modif.html";
+		//Créer une partie
+		if($_GET["action"] == 6)
+			require_once "Vues/Formulaires/partie_creer.html";
+		//Rejoindre une partie
+		if($_GET["action"] == 7)
+			require_once "Vues/Formulaires/partie_rejoindre.html";
+		//Visualiser une partie
+		if($_GET["action"] == 8)
+			require_once "Vues/Formulaires/partie_visualiser.html";
+
+	}
+?>
